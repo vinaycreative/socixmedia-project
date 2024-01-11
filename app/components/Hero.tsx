@@ -7,7 +7,7 @@ import Container from "./Container";
 const Hero = () => {
   return (
     <div className="relative">
-      <Container className="mt-14 flex h-full w-full justify-center  lg:mt-0 lg:h-[80vh]">
+      <Container className="mt-14 flex h-full w-full justify-center  lg:mt-0 lg:h-[90vh]">
         <div className="flex w-[90%] flex-col items-center  justify-center lg:flex-row lg:justify-evenly">
           <div className="flex flex-col items-center justify-center pr-4 text-center lg:items-start lg:justify-center lg:text-start">
             <div className="w-[90%]">
@@ -40,7 +40,6 @@ const Hero = () => {
               style={{ width: "100%", height: "auto" }}
               className="max-w-[500px] lg:max-w-full"
             />
-            {/* <img src="/images/home-illustration.png" alt="hero-image" /> */}
           </div>
 
           <img
