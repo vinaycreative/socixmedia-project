@@ -1,14 +1,16 @@
 import React from "react";
-import Container from "./Container";
 import Link from "next/link";
+import Image from "next/image";
+
+import Container from "./Container";
 
 const Hero = () => {
   return (
     <div className="relative">
-      <Container>
-        <div className="flex  justify-evenly">
-          <div className="flex flex-col justify-center pr-4">
-            <div className="w-[85%]">
+      <Container className="mt-14 flex h-full w-full justify-center  lg:mt-0 lg:h-[80vh]">
+        <div className="flex w-[90%] flex-col items-center  justify-center lg:flex-row lg:justify-evenly">
+          <div className="flex flex-col items-center justify-center pr-4 text-center lg:items-start lg:justify-center lg:text-start">
+            <div className="w-[90%]">
               <h1 className=" mb-4 text-5xl font-semibold leading-[52px]">
                 Empowering Your Brand's Social Media Presence
               </h1>
@@ -21,15 +23,24 @@ const Hero = () => {
 
               <Link
                 href={"#contact"}
-                className=" inline-flex rounded-full border border-primary bg-primary px-6 py-3 text-base text-white"
+                className=" inline-flex rounded-full border border-primary bg-primary px-6 py-3 text-base font-semibold text-white"
               >
                 Our Services
               </Link>
             </div>
           </div>
 
-          <div className="image">
-            <img src="/images/home-illustration.png" alt="hero-image" />
+          <div className="flex w-full items-center justify-center lg:w-[90%]">
+            <Image
+              src={"/images/home-illustration.png"}
+              alt="hero-image"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "100%", height: "auto" }}
+              className="max-w-[500px] lg:max-w-full"
+            />
+            {/* <img src="/images/home-illustration.png" alt="hero-image" /> */}
           </div>
 
           <img

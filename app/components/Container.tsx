@@ -1,7 +1,11 @@
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
-const Container = ({ children }: { children: React.ReactNode }) => {
-  return <div className="container mx-auto">{children}</div>;
+const Container = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => {
+  return <div className={twMerge("container mx-auto", className)} {...props} />;
 };
 
 export default Container;
