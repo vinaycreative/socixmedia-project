@@ -27,7 +27,7 @@ const Testimonials = (props: Props) => {
   });
 
   return (
-    <Container className=" my-56 mb-24 flex h-[400px] w-full items-center justify-center">
+    <Container className=" my-56 mb-24 flex h-[400px] w-full items-center justify-center ">
       <div className="flex w-full flex-col items-center justify-center">
         <div className="flex w-full items-center justify-between">
           <h3 className="mb-4 text-center text-4xl font-semibold leading-[52px]">
@@ -55,13 +55,13 @@ const Testimonials = (props: Props) => {
           opts={{
             align: "start",
           }}
-          className=" mt-10 h-[300px] w-full gap-10 overflow-y-hidden"
+          className=" no-scrollbar mt-10 h-[300px] w-full gap-10 overflow-y-hidden"
           setApi={setApi}
         >
-          <CarouselContent>
+          <CarouselContent className="no-scrollbar">
             {TestimonialsData.map((item, index) => (
               <CarouselItem key={index} className=" md:basis-1/2">
-                <div className="relative flex w-full flex-col items-start overflow-visible rounded-3xl border-2 border-primary p-10">
+                <div className="no-scrollbar relative flex w-full flex-col items-start overflow-visible rounded-3xl border-2 border-primary p-10">
                   <h3 className="mb-4 text-center text-2xl font-semibold leading-[32px]">
                     {item.title}
                   </h3>
