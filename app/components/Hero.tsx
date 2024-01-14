@@ -4,15 +4,15 @@ import Link from "next/link"
 
 const Hero = () => {
   return (
-    <div className="relative">
+    <div className="relative py-10">
       <Container>
         <div className="flex justify-evenly">
           <div className="flex flex-col justify-center pr-4">
-            <div className="w-[85%]">
-              <h1 className=" text-5xl font-medium mb-4 leading-[52px]">
+            <div className="relative z-[1] w-[85%] ">
+              <h1 className=" text-5xl font-semibold mb-4 leading-[52px] text-slate-700">
                 Empowering Your Brand's Social Media Presence
               </h1>
-              <p className="text-base font-normal text-gray-600 mb-4">
+              <p className="text-base font-normal text-slate-600 mb-4">
                 We are committed to providing our clients with the highest-quality digital
                 marketing services bro, using the latest technologies to achieve their business
                 goals.
@@ -25,12 +25,22 @@ const Hero = () => {
               </Link>
             </div>
           </div>
-          <div className="image">
+          <div className="image scale-90 ">
             <img src="/images/home-illustration.png" alt="hero-image" />
           </div>
           <img
             className="absolute -left-0 top-32 w-28"
             src="/images/hero-ellipse.svg"
+            alt="ellipse"
+          />
+          <img
+            className="absolute left-90 top-16 w-28"
+            src="/images/hero-rectangle.svg"
+            alt="ellipse"
+          />
+          <img
+            className="absolute left-90 bottom-10 w-20"
+            src="/images/hero-circle.svg"
             alt="ellipse"
           />
         </div>
