@@ -6,6 +6,7 @@ import FreeQuote from "./components/FreeQuote";
 import FAQ from "./components/Faq";
 import Testimonials from "@/app/components/Testimonials";
 import ContactUs from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Testimonials />
       <Divider />
       <ContactUs />
+      <Footer />
     </main>
   );
 }

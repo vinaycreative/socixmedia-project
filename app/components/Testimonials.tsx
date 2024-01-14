@@ -16,12 +16,14 @@ type Props = {};
 
 const Testimonials = (props: Props) => {
   const [api, setApi] = React.useState<CarouselApi>();
-  const [canScrollNext, setCanScrollNext] = React.useState<boolean>(false);
+  const [canScrollNext, setCanScrollNext] = React.useState<boolean>(true);
   const [canScrollPrev, setCanScrollPrev] = React.useState<boolean>(false);
 
   api?.on("select", (e) => {
     setCanScrollNext(e.canScrollNext());
     setCanScrollPrev(e.canScrollPrev());
+
+    console.log(e.canScrollNext(), e.canScrollPrev());
   });
 
   return (
@@ -35,14 +37,14 @@ const Testimonials = (props: Props) => {
             <Button
               onClick={() => api?.scrollPrev()}
               className="h-[40px] w-[40px] rounded-full bg-primary p-0"
-              disabled={canScrollNext}
+              disabled={!canScrollPrev}
             >
               <ChevronLeft />
             </Button>
             <Button
               className="h-[40px] w-[40px] rounded-full bg-primary p-0"
               onClick={() => api?.scrollNext()}
-              disabled={canScrollPrev}
+              disabled={!canScrollNext}
             >
               <ChevronRight />
             </Button>
@@ -58,7 +60,7 @@ const Testimonials = (props: Props) => {
         >
           <CarouselContent>
             {TestimonialsData.map((item, index) => (
-              <CarouselItem key={index} className="basis-1/2 ">
+              <CarouselItem key={index} className=" md:basis-1/2">
                 <div className="relative flex w-full flex-col items-start overflow-visible rounded-3xl border-2 border-primary p-10">
                   <h3 className="mb-4 text-center text-2xl font-semibold leading-[32px]">
                     {item.title}

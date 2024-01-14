@@ -9,8 +9,8 @@ type Props = {};
 const ContactUs = (props: Props) => {
   return (
     <Container>
-      <div className="mt-32 flex items-center justify-center gap-5">
-        <div className="w-[40%]">
+      <div className="mt-32 flex  items-center justify-center gap-5 ">
+        <div className="hidden w-[40%] lg:flex">
           <Image
             src="/images/contact.png"
             alt="Contact Us"
@@ -22,9 +22,12 @@ const ContactUs = (props: Props) => {
           />
         </div>
 
-        <div className="w-[55%]">
+        <div className="w-5/6 lg:w-[55%]">
           <h3 className="mb-10 text-4xl font-semibold">Contact Us</h3>
-          <form action="" className="flex flex-col gap-6">
+          <form
+            action=""
+            className="flex flex-col items-center gap-6 lg:items-start"
+          >
             <input
               type="text"
               placeholder="Name"
