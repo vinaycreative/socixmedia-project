@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Montserrat } from "next/font/google"
 import "./globals.css"
 import Header from "@/app/components/Header"
+import { AOSInit } from "@/app/components/Aos"
 
 const inter = Montserrat({ subsets: ["latin"] })
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.className}>
         <Header />
         {children}
+        <AOSInit />
       </body>
     </html>
   )

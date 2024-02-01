@@ -1,8 +1,8 @@
 import React from "react"
 
-const Divider = () => {
+const Divider = ({ ...rest }) => {
   return (
-    <div className="flex items-center justify-between my-16">
+    <div className="flex items-center justify-between my-16" {...rest}>
       <div className=" mx-5 h-[2px] w-full bg-primary md:mx-20" />
 
       <div className="hidden items-center justify-center md:flex">
